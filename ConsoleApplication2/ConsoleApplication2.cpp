@@ -21,17 +21,22 @@ int main(){
     setlocale(LC_ALL, "RUSSIAN");
     
         bool exit = false;
-    int mon;
+    int mon=1;
     
-    while (!exit) {
-        std::cout << "Введите номер месяца: ";
+    while (mon != end) {
+        std::cout << "Введите номер месяца: " << std::endl;
         std::cin >> mon;
         std::cout<<std::endl;
+        
         if (mon < 0 || mon>12) {
             std::cout << "Неправильный номер!" << std::endl;
         }
+
+        if (mon == end) {
+            std::cout << "До свидания!" ;
+        }
         switch (mon) {
-            
+
         case january: std::cout << "Январь" << std::endl;
             break;
         case february: std::cout << "Февраль" << std::endl;
@@ -56,9 +61,8 @@ int main(){
             break;
         case december:std::cout << "Декабрь" << std::endl;
             break;
-        case end:std::cout << "До свидания!" << std::endl;
-            break;
-           
+        
+        
         }
     }
     
